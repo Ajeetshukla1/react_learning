@@ -4,7 +4,7 @@ import { useState,useEffect } from 'react'
 function App() {
   const [count,setCount]=useState(0);
   function increase(){
-    setCount(c => c+1);
+    setCount(c => c+1); 
   }
   return <div>
     <Counter count={count}/>

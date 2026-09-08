@@ -11,7 +11,7 @@ export default function App(){
   useEffect(function(){
     setInterval(function(){
       setCounterVisible(c => !c)
-    },5000)
+    },5000) // the component will amount after every 5 second
   },[])
   //but this creates a performance issue
   //becasue when we unmounted the component we did not stop the setInterval clock
@@ -59,7 +59,7 @@ function Counter(){
       console.log("from inside the clock");
       
       setCount(function(count){
-        return count+1;
+        return count+1; // we cannot simply setCount(count+1) becasue we have not passed the count in the dependency array of the useeffect ,we need to pass function in set count to update the count 
       });
     },1000)
 
